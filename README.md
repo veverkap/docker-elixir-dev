@@ -5,7 +5,9 @@ It contains:
 
 * Erlang R18
 * Elixir 1.1.1
-* NodeJS 5.0.0
+* NodeJS 5.1.0
+* Postgres client (psql) 9.3.10
+* Git 1.9.1
 * Hex
 * Rebar
 
