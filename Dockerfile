@@ -3,17 +3,14 @@ FROM ubuntu:14.04
 MAINTAINER Appcues Engineering <dev+docker@appcues.com>
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
-    apt-get update -q && \
     apt-get -y install curl locales && \
     locale-gen "en_US.UTF-8" && \
     export LANG=en_US.UTF-8 && \
     curl -o /tmp/erlang.deb http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && \
     dpkg -i /tmp/erlang.deb && \
     rm -rf /tmp/erlang.deb && \
-    apt-get update -q && \
-    apt-get install -y erlang=1:18.1 elixir=1.1.1-2 postgresql-client && \
-    curl -sL https://deb.nodesource.com/setup_5.x | bash \
-    apt-get install -y nodejs \
+    (curl -sL https://deb.nodesource.com/setup_5.x | bash) && \
+    apt-get install -y erlang=1:18.1 elixir=1.1.1-2 postgresql-client nodejs git && \
     apt-get clean -y && \
     rm -rf /var/cache/apt/*
 
