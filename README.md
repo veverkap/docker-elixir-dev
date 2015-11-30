@@ -11,6 +11,8 @@ and deployment.  It contains:
 * Hex
 * Rebar
 
+Docker hub link: https://hub.docker.com/r/appcues/elixir-dev/
+
 This image is based on https://github.com/shanesveller/docker-phoenix-framework
 which does not install quite enough Erlang.
 
