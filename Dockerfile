@@ -10,7 +10,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     dpkg -i /tmp/erlang.deb && \
     rm -rf /tmp/erlang.deb && \
     (curl -sL https://deb.nodesource.com/setup_5.x | bash) && \
-    apt-get install -y erlang=1:18.1 elixir=1.1.1-2 postgresql-client nodejs git && \
+    apt-get install -y erlang=1:18.2 elixir=1.2.1 postgresql-client nodejs git && \
     apt-get clean -y && \
     rm -rf /var/cache/apt/*
 
