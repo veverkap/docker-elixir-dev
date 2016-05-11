@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 MAINTAINER Appcues Engineering <dev+docker@appcues.com>
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
-    apt-get -y install curl locales && \
+    apt-get -y install curl locales build-essential && \
     locale-gen "en_US.UTF-8" && \
     export LANG=en_US.UTF-8 && \
     curl -o /tmp/erlang.deb http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && \
